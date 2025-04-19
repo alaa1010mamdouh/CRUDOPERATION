@@ -1,0 +1,18 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "ConDelete";
+}
+
+<h1>Are You Sure You Want To Delete @Model.FirstName @Model.LastName</h1>
+<br />
+<br />
+
+<form asp-action="ConDelete">
+    <partial name="UserPartialViews/_DeleteDetailsPartialView" />
+
+    <input type="submit" value="Delete" class="btn btn-danger" />
+
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
